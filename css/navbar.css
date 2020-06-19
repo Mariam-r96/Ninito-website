@@ -1,0 +1,336 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 13.5%;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 3px 0px 5px 1px  rgb(119, 119, 119);
+    font-family: 'Raleway', sans-serif;
+    z-index: 9;
+}
+
+ .logo{
+     height: 4.2rem;
+     width: 4.2rem;
+     cursor: pointer;
+     object-fit: contain;
+ }
+
+ .logo img{
+     height: 100%;
+     width: 100%;
+     object-fit: contain;
+ }
+ .nav-links li a{
+    font-weight: 500;
+    font-size: 16px;
+    color: #787878;
+    text-decoration: none;   
+ }
+
+.nav-links{
+    list-style: none;
+    margin-left: -20rem;
+}
+
+.nav-links li{
+display: inline-block;
+padding: 0px 48px;
+font-size: 14px;
+
+}
+
+.nav-links li a{
+    transition: all 0.3s ease 0;
+}
+
+.nav-links li a:hover{
+    color: #0088a9;
+}
+
+.request_demo{
+    
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    padding: 13px 25px;
+    background-color: rgba(17, 176, 245, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0;
+}
+
+.request_demo:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+
+
+.toggleBar .fa-bars{
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  
+}
+
+.sticky + .main{
+    padding-top: 5rem;
+}
+
+.sticky + .main-container{
+    padding-top: 0;
+}
+
+/*moto mobile portrait mode  */
+ @media screen and (max-width: 360px) and (orientation:portrait) {
+    .navbar-container{
+
+        padding: 5px 13.5% !important;
+   
+    } 
+}
+
+/* ipad and ipad pro portrait mode  */
+@media screen and (min-width: 768px) and (max-width: 1024px)
+and (orientation:portrait) {
+    .nav-links{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        /* opacity: 0; */
+    }
+    .nav-links li {
+        padding: 0;
+        margin:0;
+        margin-bottom: 1rem;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: height 0.5s ease-out;
+        overflow: hidden;
+        height: 8%;
+        padding: 8px 8.5%;
+    }
+    .mobile_Navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+    }
+    .toggleBar .fa-bars{
+        display: block;
+    }
+    .navbar-container-expand{
+        height: auto;
+         transition: height 0.5s ease-in;
+     }
+
+
+}
+
+
+/* iphone5 and 5s landscape  */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { 
+    
+    .nav-links{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+    }
+    .nav-links li {
+        padding: 0;
+        margin:0;
+        margin-bottom: 1rem;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: height 0.5s ease-out;
+        overflow: hidden;
+        height: 21%;
+        padding: 7px 8.5%;
+    }
+    .mobile_Navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+    }
+    .toggleBar .fa-bars{
+        display: block;
+    }
+    .navbar-container-expand{
+        height: auto;
+         transition: height 0.5s ease-in;
+     }
+}
+
+/* @media only screen 
+and (min-device-width : 310px) 
+and (max-device-width : 599px) 
+and (orientation : landscape) { 
+    
+    .nav-links{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+    }
+    .nav-links li {
+        padding: 0;
+        margin:0;
+        margin-bottom: 1rem;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: height 0.5s ease-out;
+        overflow: hidden;
+        height: 21%;
+        padding: 7px 8.5%;
+    }
+    .mobile_Navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+    }
+    .toggleBar .fa-bars{
+        display: block;
+    }
+    .navbar-container-expand{
+        height: auto;
+         transition: height 0.5s ease-in;
+     }
+} */
+
+
+/*moto mobile portrait mode  */
+@media screen and (max-width: 600px) and (orientation:portrait) {
+
+    .mobile_Navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+    }
+   
+    .navbar-container{
+
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     height: 12%;
+     transition: height 0.5s ease-out;
+     overflow: hidden;
+     padding: 10px 13.5%;
+
+    }
+
+    .navbar-container-expand{
+       height: auto;
+        transition: height 0.5s ease-in;
+    }
+
+    .nav-links{
+        margin:1.5rem 0;
+        display: flex;
+       flex-direction: column;
+    }
+
+    .nav-links li{
+        margin-top: 1.5rem;
+    }
+    .nav-links li:first-child{
+
+        margin-top: 0px;
+    }
+
+    .nav-links {
+
+     opacity: 0;
+    
+    }
+
+    .toggleBar .fa-bars{
+        display: block;
+    }
+    
+
+}
+
+
+/* Landscape google pixel */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+    .navbar-container {
+        height: 21%;
+        padding: 6px 8.5%;
+    }
+}
+
+/* COMMON LANDSCAPE MODE */
+@media screen and (min-width: 600px) and (max-width: 1200px)
+ {
+    .nav-links{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+    }
+    .nav-links li {
+        padding: 0;
+        margin:0;
+        margin-bottom: 1rem;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: height 0.5s ease-out;
+        overflow: hidden;
+        height: 21%;
+        padding: 7px 8.5%;
+    }
+    .mobile_Navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+    }
+    .toggleBar .fa-bars{
+        display: block;
+    }
+    .navbar-container-expand{
+        height: auto;
+         transition: height 0.5s ease-in;
+     }
+
+
+}
