@@ -6,6 +6,7 @@ const request_demo = document.querySelector(".request-demo-container a");
 const nav_requestBtn = document.querySelector("#nav_demo_btn a");
 const home = document.querySelector("#home_btn a");
 const aboutUs = document.querySelector("#aboutUs_btn a");
+const logo = document.querySelector("#logo a");
 
 down_arrow.addEventListener("click", function(){
     smoothScroll(event);
@@ -13,6 +14,10 @@ down_arrow.addEventListener("click", function(){
 
 
 request_demo.addEventListener("click", function(){
+    smoothScroll(event);
+});
+
+logo.addEventListener("click", function(){
     smoothScroll(event);
 });
 
