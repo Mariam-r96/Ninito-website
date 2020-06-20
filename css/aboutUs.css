@@ -116,6 +116,9 @@ color: whitesmoke;
 
 @media screen and (max-width: 600px) {
 
+.section1{
+    height: 48vh;
+}
 .section-3,.section-2{
   padding: 3rem 1rem;
 }
@@ -149,4 +152,20 @@ and (max-device-width: 1024px) {
   justify-content: center;
 }
 
+}
+
+/* ipad and ipad pro  */
+@media screen and (min-width: 768px) and (max-width: 1024px)
+and (orientation:landscape) {
+
+    .section1{
+     height: 100vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px)
+and (orientation:portrait) {
+
+    .section1{
+     height: 57vh;
+    }
 }

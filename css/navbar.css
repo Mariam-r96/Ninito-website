@@ -8,15 +8,20 @@
   
 }
 
-.navbar-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 11px 13.5%;
+nav{
+    
+    padding: 7px 0;
+    height: 5rem;
+
+    width: 100%;
     background-color: #FFFFFF;
     box-sizing: border-box;
     box-shadow: 3px 0px 5px 1px  rgb(119, 119, 119);
     font-family: 'Raleway', sans-serif;
+   
+}
+
+.navbar-container{
     z-index: 9;
 }
 
@@ -25,6 +30,8 @@
      width: 4.2rem;
      cursor: pointer;
      object-fit: contain;
+     float: left;
+     margin-left: 13.5%;
  }
 
  .logo img{
@@ -41,12 +48,14 @@
 
 .nav-links{
     list-style: none;
-    margin-left: -20rem;
+    margin-left: 6rem;
+    float: left;
+    padding: 15px 0;
 }
 
 .nav-links li{
 display: inline-block;
-padding: 0px 48px;
+margin-right: 6rem;
 font-size: 14px;
 
 }
@@ -60,7 +69,7 @@ font-size: 14px;
 }
 
 .request_demo{
-    
+  
     font-weight: 500;
     font-size: 14px;
     color: white;
@@ -70,15 +79,22 @@ font-size: 14px;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0;
+    margin-left: 17rem;
 }
 
 .request_demo:hover{
     background-color: rgba(0,136,169,0.8);
 }
+.request_demo:active,
+.request_demo:focus{
+   outline: none;
+}
 
 
-.toggleBar .fa-bars{
+.toggle-btn .fa-bars{
     display: none;
+    float: right;
+    margin: 17px 13.5%;
 }
 
 .sticky {
@@ -96,241 +112,59 @@ font-size: 14px;
     padding-top: 0;
 }
 
-/*moto mobile portrait mode  */
- @media screen and (max-width: 360px) and (orientation:portrait) {
-    .navbar-container{
 
-        padding: 5px 13.5% !important;
+@media (max-width: 941px){
+    .toggle-btn .fa-bars{
+        display: block;
+       
+    }
+
+    .nav-links{
+      position: fixed;
+      width: 100%;
+      height: auto;
+      background: rgb(224, 224, 224);
+      top: -310px;
+      left: 0;
+      text-align: center;
+      margin: 0 auto;
+      transition: all .5s ease-out ;
+      z-index: -1;
+    }
+
+    .request_demo{
+        margin: 0;
+    }
+
+    .nav-links li {
+        display: block;
+        line-height: 3rem;
+        margin: 0 auto;
+    }
+    
+ 
+}
+
+
+
+@media (min-width:942px) and (max-width: 1182px) {
+    
+    .logo{
+       height: 4rem;
+       width: 4rem;
+       margin-left: 12%;
+      
+     }
    
-    } 
-}
-
-/* ipad and ipad pro portrait mode  */
-@media screen and (min-width: 768px) and (max-width: 1024px)
-and (orientation:portrait) {
-    .nav-links{
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        /* opacity: 0; */
-    }
-    .nav-links li {
-        padding: 0;
-        margin:0;
-        margin-bottom: 1rem;
-    }
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        transition: height 0.5s ease-out;
-        overflow: hidden;
-        height: 8%;
-        padding: 8px 8.5%;
-    }
-    .mobile_Navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-    }
-    .toggleBar .fa-bars{
-        display: block;
-    }
-    .navbar-container-expand{
-        height: auto;
-         transition: height 0.5s ease-in;
-     }
-
-
-}
-
-
-/* iphone5 and 5s landscape  */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : landscape) { 
-    
-    .nav-links{
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        opacity: 0;
-    }
-    .nav-links li {
-        padding: 0;
-        margin:0;
-        margin-bottom: 1rem;
-    }
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        transition: height 0.5s ease-out;
-        overflow: hidden;
-        height: 21%;
-        padding: 7px 8.5%;
-    }
-    .mobile_Navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-    }
-    .toggleBar .fa-bars{
-        display: block;
-    }
-    .navbar-container-expand{
-        height: auto;
-         transition: height 0.5s ease-in;
-     }
-}
-
-/* @media only screen 
-and (min-device-width : 310px) 
-and (max-device-width : 599px) 
-and (orientation : landscape) { 
-    
-    .nav-links{
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        opacity: 0;
-    }
-    .nav-links li {
-        padding: 0;
-        margin:0;
-        margin-bottom: 1rem;
-    }
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        transition: height 0.5s ease-out;
-        overflow: hidden;
-        height: 21%;
-        padding: 7px 8.5%;
-    }
-    .mobile_Navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-    }
-    .toggleBar .fa-bars{
-        display: block;
-    }
-    .navbar-container-expand{
-        height: auto;
-         transition: height 0.5s ease-in;
-     }
-} */
-
-
-/*moto mobile portrait mode  */
-@media screen and (max-width: 600px) and (orientation:portrait) {
-
-    .mobile_Navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-    }
    
-    .navbar-container{
-
-     flex-direction: column;
-     align-items: center;
-     text-align: center;
-     height: 12%;
-     transition: height 0.5s ease-out;
-     overflow: hidden;
-     padding: 10px 13.5%;
-
-    }
-
-    .navbar-container-expand{
-       height: auto;
-        transition: height 0.5s ease-in;
-    }
-
-    .nav-links{
-        margin:1.5rem 0;
-        display: flex;
-       flex-direction: column;
-    }
-
-    .nav-links li{
-        margin-top: 1.5rem;
-    }
-    .nav-links li:first-child{
-
-        margin-top: 0px;
-    }
-
-    .nav-links {
-
-     opacity: 0;
-    
-    }
-
-    .toggleBar .fa-bars{
-        display: block;
-    }
-    
-
-}
-
-
-/* Landscape google pixel */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) 
-  and (orientation: landscape) {
-    .navbar-container {
-        height: 21%;
-        padding: 6px 8.5%;
-    }
-}
-
-/* COMMON LANDSCAPE MODE */
-@media screen and (min-width: 600px) and (max-width: 1200px)
- {
-    .nav-links{
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        opacity: 0;
-    }
-    .nav-links li {
-        padding: 0;
-        margin:0;
-        margin-bottom: 1rem;
-    }
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        transition: height 0.5s ease-out;
-        overflow: hidden;
-        height: 21%;
-        padding: 7px 8.5%;
-    }
-    .mobile_Navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-    }
-    .toggleBar .fa-bars{
-        display: block;
-    }
-    .navbar-container-expand{
-        height: auto;
-         transition: height 0.5s ease-in;
-     }
-
-
+       .nav-links li {
+           display: inline-block;
+           margin-right: 7rem;
+           font-size: 14px;
+       }
+   
+       .request_demo{
+     
+           margin-left: 0;
+       }
 }
