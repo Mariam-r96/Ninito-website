@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 const down_arrow = document.querySelector(".down-arrow a");
+const learn_more = document.querySelector(".learnMore a");
 const request_demo = document.querySelector(".request-demo-container a");
 const nav_requestBtn = document.querySelector("#nav_demo_btn a");
 const home = document.querySelector("#home_btn a");
@@ -9,6 +10,10 @@ const aboutUs = document.querySelector("#aboutUs_btn a");
 const logo = document.querySelector("#logo a");
 
 down_arrow.addEventListener("click", function(){
+    smoothScroll(event);
+});
+
+learn_more.addEventListener("click", function(){
     smoothScroll(event);
 });
 

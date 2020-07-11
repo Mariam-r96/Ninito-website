@@ -14,7 +14,7 @@ body{
 
 .section1{
   background-image: linear-gradient(to right, rgba(78, 78, 78, 0.452), rgba(59, 59, 59, 0.651)), url("../assets/about_us_banner.jpg");
-  height: 100vh;
+  height: 87vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;

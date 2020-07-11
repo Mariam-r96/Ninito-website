@@ -1,25 +1,4 @@
-    // carousel 
-   
-   const flavoursContainer = document.getElementById("flavoursContainer");
-   const flavoursScrollWidth = flavoursContainer.scrollWidth;
-   let leftArrow = document.querySelector(".prev");
-   let rightArrow = document.querySelector(".next");
 
- //   rightArrow.addEventListener("mouseover", () => {
- //     self.setInterval(() => {
- //         if (flavoursContainer.scrollLeft !== flavoursScrollWidth) {
- //         flavoursContainer.scrollTo(flavoursContainer.scrollLeft + 1,0);
- //         }
- //     }, 3);
- //   })
-
-   rightArrow.addEventListener("click", () => {  
-     flavoursContainer.scrollLeft +=135;       
-   });
-
-   leftArrow.addEventListener("click", () => {
-     flavoursContainer.scrollLeft -=135;
-   })
 
 //    ANIMATION 
 
